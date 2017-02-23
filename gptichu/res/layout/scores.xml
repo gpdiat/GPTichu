@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background"
+        android:gravity="center|center_vertical|fill"
+        android:orientation="vertical"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <TableRow
+            android:id="@+id/teamsRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="35dip"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="50dip"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/team1name"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="10dip"
+                android:paddingTop="20dip"
+                android:textColor="#ffaa55"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/team2name"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="20dip"
+                android:paddingTop="20dip"
+                android:textColor="#ffaa55"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background"
+            android:scrollbars="vertical" >
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical|fill"
+                android:orientation="vertical"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="40dip" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TableLayout
+                        android:id="@+id/tableLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+                    </TableLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="30dip" >
+
+                    <Button
+                        android:id="@+id/tichu_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dip"
+                        android:layout_weight="1"
+                        android:text="@string/show_choices"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/undo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dip"
+                        android:text="@string/undo"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/cdimage"
+                        android:src="@drawable/whiteline"
+                        android:tint="#66ccff" />
+                </TableRow>
+
+                <TableLayout
+                    android:id="@+id/tichu_table"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/col1" >
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tichu"
+                            android:textColor="@color/green"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tichu"
+                            android:textColor="@color/red"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gtichu"
+                            android:textColor="@color/green"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gtichu"
+                            android:textColor="@color/red"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nothing"
+                            android:textSize="10sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:id="@+id/tichu_pl1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radiog1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_span="5"
+                            android:checkedButton="@+id/fifth1"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/first1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="5"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/second1"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/third1"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fourth1"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fifth1"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:id="@+id/tichu_pl2"
+                            android:layout_width="wrap_content"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radiog2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_span="5"
+                            android:checkedButton="@+id/fifth2"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/first2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="5"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/second2"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/third2"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fourth2"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fifth2"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:id="@+id/tichu_pl3"
+                            android:layout_width="wrap_content"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radiog3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_span="5"
+                            android:checkedButton="@+id/fifth3"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/first3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="5"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/second3"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/third3"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fourth3"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fifth3"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:id="@+id/tichu_pl4"
+                            android:layout_width="wrap_content"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radiog4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_span="5"
+                            android:checkedButton="@+id/fifth4"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/first4"
+                                android:layout_width="fill_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="5"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/second4"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/third4"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fourth4"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/fifth4"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/col1" >
+
+                    <TableRow
+                        android:id="@+id/tichu_choice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/double1"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dip"
+                            android:paddingRight="5dip"
+                            android:paddingTop="5dip"
+                            android:textColor="@color/green"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/double2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dip"
+                            android:paddingRight="5dip"
+                            android:paddingTop="5dip"
+                            android:textColor="@color/green"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dip"
+                            android:paddingRight="5dip"
+                            android:paddingTop="5dip"
+                            android:text="@string/nothing"
+                            android:textSize="10sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tichu_double"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/col1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/double_closing"
+                            android:textSize="10sp" />
+
+                        <RadioGroup
+                            android:id="@+id/rdouble"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_span="3"
+                            android:checkedButton="@+id/rdouble3"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rdouble1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="3"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/rdouble2"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+
+                            <RadioButton
+                                android:id="@+id/rdouble3"
+                                android:layout_width="40dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/button_radio" />
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TableRow
+                    android:id="@+id/tichu_zero"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/col1"
+                    android:gravity="center"
+                    android:paddingLeft="100dip"
+                    android:paddingRight="100dip"
+                    android:paddingTop="30dip" >
+
+                    <Button
+                        android:id="@+id/zero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/zero"
+                        android:textSize="13sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/cdimage"
+                        android:src="@drawable/whiteline" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/nextRoundRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/nextRound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/nextRound" />
+                </TableRow>
+                   <TableRow
+                       android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.ads.AdView
+                android:id="@+id/ad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ads:adSize="BANNER"
+                ads:adUnitId="a14faa65f0b9c9c"
+                ads:loadAdOnCreate="true" />
+        </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+    </TableLayout>
